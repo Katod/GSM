@@ -15,6 +15,21 @@ static void databaseError(sqlite3* db){
 }
 
 
+static int callback(void *NotUsed, int argc, char **argv, char **azColName)
+{
+  int i;
+  
+  for(i=0; i<argc; i++)
+  {
+  printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+  }
+  
+  printf("\n");
+  return 0;
+}
+
+
+
 static int readBlob(
                 sqlite3 *db, /* Database containing blobs table */
                 const char *zKey, /* Null-terminated key to retrieve blob for */
@@ -100,9 +115,8 @@ if( !zBlob )
   fprintf(stderr, "No such database entry: %sn", zFile);
   return 1;
 }
-
-//sqlite3_exec()
-  
+int rc =0;
+rc = sqlite3_exec(pDB, argv[2], callback, 0, &zErrMsg);
 //  auto	char	event[256];
 //  auto	int	idx;
 // 
@@ -149,5 +163,6 @@ if( !zBlob )
 // }
 
 // Function exit
+sqlite3_close(pDB);
 return(EXIT_SUCCESS);// return function status
 }// end of main()
