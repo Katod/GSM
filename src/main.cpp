@@ -38,30 +38,30 @@ char* get_file ( void *NotUsed, int argc, char **argv, char **azColName )
 
 int main ( int argc, char **argv )
 {
-   // client* Test = new client ( 21213,DB_PATH );
+    client* Test = new client ( 21213,DB_PATH );
 
     
-    sqlite3 *db;
-    char *zErrMsg = 0;
-    int rc;
-
-    const char *zSql = "SELECT * FROM clients";
-
-
-    rc = sqlite3_open ( DB_PATH, &db );
-
-    if ( rc ) {
-        fprintf ( stderr, "Can't open database: %s\n", sqlite3_errmsg ( db ) );
-        sqlite3_close ( db );
-    //exit(1);
-    }
-
-    rc = sqlite3_exec ( db, zSql, callback, 0, &zErrMsg );
-
-    if ( rc!=SQLITE_OK ) {
-        fprintf ( stderr, "SQL error: %s\n", zErrMsg );
-        sqlite3_free ( zErrMsg );
-    }
+//     sqlite3 *db;
+//     char *zErrMsg = 0;
+//     int rc;
+// 
+//     const char *zSql = "SELECT * FROM clients";
+// 
+// 
+//     rc = sqlite3_open ( DB_PATH, &db );
+// 
+//     if ( rc ) {
+//         fprintf ( stderr, "Can't open database: %s\n", sqlite3_errmsg ( db ) );
+//         sqlite3_close ( db );
+//     //exit(1);
+//     }
+// 
+//     rc = sqlite3_exec ( db, zSql, callback, 0, &zErrMsg );
+// 
+//     if ( rc!=SQLITE_OK ) {
+//         fprintf ( stderr, "SQL error: %s\n", zErrMsg );
+//         sqlite3_free ( zErrMsg );
+//     }
 //  // Asterisk API
 //
 //   auto	char	event[256];

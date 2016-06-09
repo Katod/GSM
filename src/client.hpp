@@ -14,8 +14,8 @@ class client
     sqlite3 *db;
 
     std::map <std::string,std::string> gsmMenu;
-    int getMenuData ( void *NotUsed, int argc, char **argv, char **azColName );
-    int getMenuID ( void *NotUsed, int argc, char **argv, char **azColName );
+    static int getMenuData ( void *NotUsed, int argc, char **argv, char **azColName );
+    static int getMenuID ( void *NotUsed, int argc, char **argv, char **azColName );
 public:
     client ( int phone_number,const char* db_path );
     void getDataByPath ( char* path );
