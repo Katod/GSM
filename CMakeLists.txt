@@ -7,7 +7,8 @@ link_directories(/usr/lib/x86_64-linux-gnu)
 link_libraries (libsqlite3.so)
 
 
-add_executable(hello main.cpp)
+add_executable(hello src/client.cpp src/main.cpp)
 
 
 install(TARGETS hello RUNTIME DESTINATION bin)
+add_subdirectory(src)
