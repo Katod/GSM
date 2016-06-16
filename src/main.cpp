@@ -13,7 +13,7 @@ const char* DB_PATH ="/home/katod/projects/GSM/build/GSM";
 
 int main ( int argc, char **argv )
 {
-    client* Test = new client ( 21213,DB_PATH );
+    client* Test = new client ( 123,DB_PATH );
 
 
 //     sqlite3 *db;
