@@ -35,9 +35,12 @@ client::client ( int phone_number,const char* db_path ) :
 int client::communWithClient()
 {
  this->callPath = " ";
+
+ printf("S,%s\n",this->getDataByPath(callPath));
+ fflush(stdout);
  
-  auto  char    event[256];
-  auto       int     idx;
+  char    event[256];
+  int     idx;
   
 //  Set the syslog ident
 //  openlog("mfe", LOG_PID, LOG_USER);
@@ -50,7 +53,7 @@ int client::communWithClient()
    
  if('*' == *event)
  {
-   break;
+   this->callPath.pop_back();
  }
  
  else if('#' == *event)
@@ -60,8 +63,8 @@ int client::communWithClient()
  
  else
  {
-  callPath += *event;
-  printf("S,%s\n",callPath);
+  this->callPath += *event;
+  printf("S,%s\n",this->getDataByPath(callPath));
   fflush(stdout);
 }
  
@@ -70,6 +73,16 @@ int client::communWithClient()
  return 1;
     
 }
+
+void client::playFileByPath ()
+{
+  printf("S,%s\n",this->getDataByPath(this->callPath));
+  fflush(stdout);
+}
+
+
+
+
 std::string client::getDataByPath ( std::string path )
 {
     auto it = this->gsmMenu.find(path);
