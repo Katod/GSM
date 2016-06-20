@@ -13,3 +13,4 @@ include_directories(include)
 
 install(TARGETS hello RUNTIME DESTINATION bin)
 add_subdirectory(src)
+SET(CMAKE_CXX_FLAGS "-std=c++1y")

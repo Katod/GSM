@@ -13,17 +13,18 @@ class client
 private:
     int phoneNumber;
     int menuID;
-
+    std::string callPath;
     SQLite::Database    db;    //< Database connection
-
     std::map <std::string,std::string> gsmMenu;
+    
     static int getMenuData ( void *Object, int argc, char **argv, char **azColName );
     static int getMenuID ( void *Object, int argc, char **argv, char **azColName );
 public:
     client();
     client ( int phone_number,const char* db_path );
-    void getDataByPath ( char* path );
+    int communWithClient();
+    std::string getDataByPath (std::string path );
     void setMenuId ( int id );
-    void addGsmPath ( char* path, char* file );
+    void addGSMPath ( char* path, char* file );
 };
 // kate: indent-mode cstyle; indent-width 4; replace-tabs on; 
