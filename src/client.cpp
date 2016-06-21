@@ -5,7 +5,8 @@ client::client ( int phone_number,const char* db_path ) :
     phoneNumber ( phone_number ),
     db ( db_path )
 {
-    try {
+    try 
+    {
         std::string Exec = "SELECT id FROM clients WHERE phone_number = "+ std::to_string ( phone_number );
         menuID = db.execAndGet ( Exec );
        // std::cout << "execAndGet=" << menuID << std::endl;
@@ -25,6 +26,8 @@ client::client ( int phone_number,const char* db_path ) :
             std::cout << ( *it ).first << " : " << ( *it ).second << std::endl;
             
         }
+        
+        fprintf(stderr, "CLient connect Menu id = %d Phone Number = %d",menuID,phone_number);
     }
  
     catch ( std::exception& e ) {
@@ -42,6 +45,7 @@ int client::communWithClient()
   char    event[256];
   int     idx;
   
+  
 //  Set the syslog ident
 //  openlog("mfe", LOG_PID, LOG_USER);
 //  syslog(LOG_ERR, "Starting.");
@@ -50,7 +54,8 @@ int client::communWithClient()
  while(NULL != fgets(event, sizeof(event), stdin))
  {
  //syslog(LOG_ERR, event);
-   
+  
+ fprintf(stderr, "Wait input Call path = %s",callPath);
  if('*' == *event)
  {
    this->callPath.pop_back();
