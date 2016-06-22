@@ -24,6 +24,7 @@ public:
     client ( int phone_number,const char* db_path );
     int communWithClient();
     std::string getDataByPath (std::string path );
+    std::string getDataByPath ();
     void setMenuId ( int id );
     void addGSMPath ( char* path, char* file );
     void playFileByPath();

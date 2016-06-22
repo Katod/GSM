@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/katod/projects/Hello
+CMAKE_SOURCE_DIR = /home/katod/projects/GSM
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/katod/projects/Hello/build
+CMAKE_BINARY_DIR = /home/katod/projects/GSM/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hello.dir/depend.make
@@ -57,41 +57,171 @@ include CMakeFiles/hello.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/hello.dir/flags.make
 
-CMakeFiles/hello.dir/main.cpp.o: CMakeFiles/hello.dir/flags.make
-CMakeFiles/hello.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/katod/projects/Hello/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hello.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/main.cpp.o -c /home/katod/projects/Hello/main.cpp
+CMakeFiles/hello.dir/src/Column.cpp.o: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/Column.cpp.o: ../src/Column.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/katod/projects/GSM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hello.dir/src/Column.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/src/Column.cpp.o -c /home/katod/projects/GSM/src/Column.cpp
 
-CMakeFiles/hello.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/katod/projects/Hello/main.cpp > CMakeFiles/hello.dir/main.cpp.i
+CMakeFiles/hello.dir/src/Column.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/Column.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/katod/projects/GSM/src/Column.cpp > CMakeFiles/hello.dir/src/Column.cpp.i
 
-CMakeFiles/hello.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/katod/projects/Hello/main.cpp -o CMakeFiles/hello.dir/main.cpp.s
+CMakeFiles/hello.dir/src/Column.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/Column.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/katod/projects/GSM/src/Column.cpp -o CMakeFiles/hello.dir/src/Column.cpp.s
 
-CMakeFiles/hello.dir/main.cpp.o.requires:
+CMakeFiles/hello.dir/src/Column.cpp.o.requires:
 
-.PHONY : CMakeFiles/hello.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/hello.dir/src/Column.cpp.o.requires
 
-CMakeFiles/hello.dir/main.cpp.o.provides: CMakeFiles/hello.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/hello.dir/main.cpp.o.provides
+CMakeFiles/hello.dir/src/Column.cpp.o.provides: CMakeFiles/hello.dir/src/Column.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Column.cpp.o.provides.build
+.PHONY : CMakeFiles/hello.dir/src/Column.cpp.o.provides
 
-CMakeFiles/hello.dir/main.cpp.o.provides.build: CMakeFiles/hello.dir/main.cpp.o
+CMakeFiles/hello.dir/src/Column.cpp.o.provides.build: CMakeFiles/hello.dir/src/Column.cpp.o
+
+
+CMakeFiles/hello.dir/src/Database.cpp.o: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/Database.cpp.o: ../src/Database.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/katod/projects/GSM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hello.dir/src/Database.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/src/Database.cpp.o -c /home/katod/projects/GSM/src/Database.cpp
+
+CMakeFiles/hello.dir/src/Database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/Database.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/katod/projects/GSM/src/Database.cpp > CMakeFiles/hello.dir/src/Database.cpp.i
+
+CMakeFiles/hello.dir/src/Database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/Database.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/katod/projects/GSM/src/Database.cpp -o CMakeFiles/hello.dir/src/Database.cpp.s
+
+CMakeFiles/hello.dir/src/Database.cpp.o.requires:
+
+.PHONY : CMakeFiles/hello.dir/src/Database.cpp.o.requires
+
+CMakeFiles/hello.dir/src/Database.cpp.o.provides: CMakeFiles/hello.dir/src/Database.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Database.cpp.o.provides.build
+.PHONY : CMakeFiles/hello.dir/src/Database.cpp.o.provides
+
+CMakeFiles/hello.dir/src/Database.cpp.o.provides.build: CMakeFiles/hello.dir/src/Database.cpp.o
+
+
+CMakeFiles/hello.dir/src/Statement.cpp.o: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/Statement.cpp.o: ../src/Statement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/katod/projects/GSM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hello.dir/src/Statement.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/src/Statement.cpp.o -c /home/katod/projects/GSM/src/Statement.cpp
+
+CMakeFiles/hello.dir/src/Statement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/Statement.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/katod/projects/GSM/src/Statement.cpp > CMakeFiles/hello.dir/src/Statement.cpp.i
+
+CMakeFiles/hello.dir/src/Statement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/Statement.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/katod/projects/GSM/src/Statement.cpp -o CMakeFiles/hello.dir/src/Statement.cpp.s
+
+CMakeFiles/hello.dir/src/Statement.cpp.o.requires:
+
+.PHONY : CMakeFiles/hello.dir/src/Statement.cpp.o.requires
+
+CMakeFiles/hello.dir/src/Statement.cpp.o.provides: CMakeFiles/hello.dir/src/Statement.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Statement.cpp.o.provides.build
+.PHONY : CMakeFiles/hello.dir/src/Statement.cpp.o.provides
+
+CMakeFiles/hello.dir/src/Statement.cpp.o.provides.build: CMakeFiles/hello.dir/src/Statement.cpp.o
+
+
+CMakeFiles/hello.dir/src/Transaction.cpp.o: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/Transaction.cpp.o: ../src/Transaction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/katod/projects/GSM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hello.dir/src/Transaction.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/src/Transaction.cpp.o -c /home/katod/projects/GSM/src/Transaction.cpp
+
+CMakeFiles/hello.dir/src/Transaction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/Transaction.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/katod/projects/GSM/src/Transaction.cpp > CMakeFiles/hello.dir/src/Transaction.cpp.i
+
+CMakeFiles/hello.dir/src/Transaction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/Transaction.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/katod/projects/GSM/src/Transaction.cpp -o CMakeFiles/hello.dir/src/Transaction.cpp.s
+
+CMakeFiles/hello.dir/src/Transaction.cpp.o.requires:
+
+.PHONY : CMakeFiles/hello.dir/src/Transaction.cpp.o.requires
+
+CMakeFiles/hello.dir/src/Transaction.cpp.o.provides: CMakeFiles/hello.dir/src/Transaction.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Transaction.cpp.o.provides.build
+.PHONY : CMakeFiles/hello.dir/src/Transaction.cpp.o.provides
+
+CMakeFiles/hello.dir/src/Transaction.cpp.o.provides.build: CMakeFiles/hello.dir/src/Transaction.cpp.o
+
+
+CMakeFiles/hello.dir/src/client.cpp.o: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/client.cpp.o: ../src/client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/katod/projects/GSM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/hello.dir/src/client.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/src/client.cpp.o -c /home/katod/projects/GSM/src/client.cpp
+
+CMakeFiles/hello.dir/src/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/client.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/katod/projects/GSM/src/client.cpp > CMakeFiles/hello.dir/src/client.cpp.i
+
+CMakeFiles/hello.dir/src/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/client.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/katod/projects/GSM/src/client.cpp -o CMakeFiles/hello.dir/src/client.cpp.s
+
+CMakeFiles/hello.dir/src/client.cpp.o.requires:
+
+.PHONY : CMakeFiles/hello.dir/src/client.cpp.o.requires
+
+CMakeFiles/hello.dir/src/client.cpp.o.provides: CMakeFiles/hello.dir/src/client.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/client.cpp.o.provides.build
+.PHONY : CMakeFiles/hello.dir/src/client.cpp.o.provides
+
+CMakeFiles/hello.dir/src/client.cpp.o.provides.build: CMakeFiles/hello.dir/src/client.cpp.o
+
+
+CMakeFiles/hello.dir/src/main.cpp.o: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/katod/projects/GSM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/hello.dir/src/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/src/main.cpp.o -c /home/katod/projects/GSM/src/main.cpp
+
+CMakeFiles/hello.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/katod/projects/GSM/src/main.cpp > CMakeFiles/hello.dir/src/main.cpp.i
+
+CMakeFiles/hello.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/katod/projects/GSM/src/main.cpp -o CMakeFiles/hello.dir/src/main.cpp.s
+
+CMakeFiles/hello.dir/src/main.cpp.o.requires:
+
+.PHONY : CMakeFiles/hello.dir/src/main.cpp.o.requires
+
+CMakeFiles/hello.dir/src/main.cpp.o.provides: CMakeFiles/hello.dir/src/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/main.cpp.o.provides.build
+.PHONY : CMakeFiles/hello.dir/src/main.cpp.o.provides
+
+CMakeFiles/hello.dir/src/main.cpp.o.provides.build: CMakeFiles/hello.dir/src/main.cpp.o
 
 
 # Object files for target hello
 hello_OBJECTS = \
-"CMakeFiles/hello.dir/main.cpp.o"
+"CMakeFiles/hello.dir/src/Column.cpp.o" \
+"CMakeFiles/hello.dir/src/Database.cpp.o" \
+"CMakeFiles/hello.dir/src/Statement.cpp.o" \
+"CMakeFiles/hello.dir/src/Transaction.cpp.o" \
+"CMakeFiles/hello.dir/src/client.cpp.o" \
+"CMakeFiles/hello.dir/src/main.cpp.o"
 
 # External object files for target hello
 hello_EXTERNAL_OBJECTS =
 
-hello: CMakeFiles/hello.dir/main.cpp.o
+hello: CMakeFiles/hello.dir/src/Column.cpp.o
+hello: CMakeFiles/hello.dir/src/Database.cpp.o
+hello: CMakeFiles/hello.dir/src/Statement.cpp.o
+hello: CMakeFiles/hello.dir/src/Transaction.cpp.o
+hello: CMakeFiles/hello.dir/src/client.cpp.o
+hello: CMakeFiles/hello.dir/src/main.cpp.o
 hello: CMakeFiles/hello.dir/build.make
 hello: CMakeFiles/hello.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/katod/projects/Hello/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable hello"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/katod/projects/GSM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable hello"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hello.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -99,7 +229,12 @@ CMakeFiles/hello.dir/build: hello
 
 .PHONY : CMakeFiles/hello.dir/build
 
-CMakeFiles/hello.dir/requires: CMakeFiles/hello.dir/main.cpp.o.requires
+CMakeFiles/hello.dir/requires: CMakeFiles/hello.dir/src/Column.cpp.o.requires
+CMakeFiles/hello.dir/requires: CMakeFiles/hello.dir/src/Database.cpp.o.requires
+CMakeFiles/hello.dir/requires: CMakeFiles/hello.dir/src/Statement.cpp.o.requires
+CMakeFiles/hello.dir/requires: CMakeFiles/hello.dir/src/Transaction.cpp.o.requires
+CMakeFiles/hello.dir/requires: CMakeFiles/hello.dir/src/client.cpp.o.requires
+CMakeFiles/hello.dir/requires: CMakeFiles/hello.dir/src/main.cpp.o.requires
 
 .PHONY : CMakeFiles/hello.dir/requires
 
@@ -108,6 +243,6 @@ CMakeFiles/hello.dir/clean:
 .PHONY : CMakeFiles/hello.dir/clean
 
 CMakeFiles/hello.dir/depend:
-	cd /home/katod/projects/Hello/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/katod/projects/Hello /home/katod/projects/Hello /home/katod/projects/Hello/build /home/katod/projects/Hello/build /home/katod/projects/Hello/build/CMakeFiles/hello.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/katod/projects/GSM/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/katod/projects/GSM /home/katod/projects/GSM /home/katod/projects/GSM/build /home/katod/projects/GSM/build /home/katod/projects/GSM/build/CMakeFiles/hello.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hello.dir/depend
 

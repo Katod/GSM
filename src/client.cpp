@@ -19,15 +19,18 @@ client::client ( int phone_number,const char* db_path ) :
         {
             std::string a = query.getColumn ( 1 ); // VELOSIPED
             std::string b = query.getColumn ( 2 ); // KOSTUL
+           // gsmMenu.insert ( std::pair<std::string,std::string> (std::string(query.getColumn ( 1 )),std::string(query.getColumn ( 1 ) )) );
             gsmMenu.insert ( std::pair<std::string,std::string> (a,b ) );
-        }
-
-        for ( auto it = gsmMenu.begin(); it != gsmMenu.end(); ++it ) {
-            std::cout << ( *it ).first << " : " << ( *it ).second << std::endl;
+            
             
         }
+
+//         for ( auto it = gsmMenu.begin(); it != gsmMenu.end(); ++it ) {
+//             std::cout << ( *it ).first << " : " << ( *it ).second << std::endl;
+//             
+//         }
         
-        fprintf(stderr, "CLient connect Menu id = %d Phone Number = %d",menuID,phone_number);
+       // fprintf(stderr, "CLient connect Menu id = %d Phone Number = %d",menuID,phone_number);
     }
  
     catch ( std::exception& e ) {
@@ -35,12 +38,14 @@ client::client ( int phone_number,const char* db_path ) :
     }
 }
 
+
+
 int client::communWithClient()
 {
- this->callPath = " ";
+ this->callPath = "";
 
- printf("S,%s\n",this->getDataByPath(callPath));
- fflush(stdout);
+ //printf("S,%s\n",this->getDataByPath(callPath));
+ //fflush(stdout);
  
   char    event[256];
   int     idx;
@@ -48,33 +53,50 @@ int client::communWithClient()
   
 //  Set the syslog ident
 //  openlog("mfe", LOG_PID, LOG_USER);
-//  syslog(LOG_ERR, "Starting.");
-
+//  syslog(LOG_E
+ 
+   std::cerr<<this->getDataByPath(" ")<<std::endl;
 // read events
  while(NULL != fgets(event, sizeof(event), stdin))
  {
+
+   
  //syslog(LOG_ERR, event);
   
- fprintf(stderr, "Wait input Call path = %s",callPath);
+ //fprintf(stderr, "Wait input Call path = %s",callPath);
  if('*' == *event)
  {
+   std::cerr<<"Number *"<<std::endl;
    this->callPath.pop_back();
  }
  
  else if('#' == *event)
  {
+   
+   std::cerr<<"Number #"<<std::endl;
    break;
  }
  
- else
+ else 
  {
-  this->callPath += *event;
-  printf("S,%s\n",this->getDataByPath(callPath));
-  fflush(stdout);
-}
- 
- 
+   callPath+=*event;
+   std::cerr<<callPath<<std::endl;
  }
+ 
+   std::cerr<<this->getDataByPath()<<std::endl;
+ 
+ 
+// //  else
+// //  {
+// //   this->callPath += *event;
+// //   std::cout<<"Test";
+// // //  printf("S,%s\n",this->getDataByPath(callPath));
+// //  // printf("%s",this->getDataByPath(callPath));
+// //  // fflush(stdout);
+// // }
+//  
+//  
+  }
  return 1;
     
 }
@@ -94,8 +116,20 @@ std::string client::getDataByPath ( std::string path )
     if(it != gsmMenu.end())
         return (*it).second;
     else
-        return nullptr;
+        return "";
 }
+
+
+
+std::string client::getDataByPath()
+{
+    auto it = this->gsmMenu.find(this->callPath);
+    if(it != gsmMenu.end())
+        return (*it).second;
+    else
+        return "";
+}
+
  
 
 void client::setMenuId ( int id )

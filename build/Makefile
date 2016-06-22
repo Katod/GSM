@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/katod/projects/Hello
+CMAKE_SOURCE_DIR = /home/katod/projects/GSM
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/katod/projects/Hello/build
+CMAKE_BINARY_DIR = /home/katod/projects/GSM/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,9 +124,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/katod/projects/Hello/build/CMakeFiles /home/katod/projects/Hello/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/katod/projects/GSM/build/CMakeFiles /home/katod/projects/GSM/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/katod/projects/Hello/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/katod/projects/GSM/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -167,32 +167,167 @@ hello/fast:
 	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
-main.o: main.cpp.o
+src/Column.o: src/Column.cpp.o
 
-.PHONY : main.o
+.PHONY : src/Column.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/Column.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Column.cpp.o
+.PHONY : src/Column.cpp.o
 
-main.i: main.cpp.i
+src/Column.i: src/Column.cpp.i
 
-.PHONY : main.i
+.PHONY : src/Column.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Column.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Column.cpp.i
+.PHONY : src/Column.cpp.i
 
-main.s: main.cpp.s
+src/Column.s: src/Column.cpp.s
 
-.PHONY : main.s
+.PHONY : src/Column.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Column.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Column.cpp.s
+.PHONY : src/Column.cpp.s
+
+src/Database.o: src/Database.cpp.o
+
+.PHONY : src/Database.o
+
+# target to build an object file
+src/Database.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Database.cpp.o
+.PHONY : src/Database.cpp.o
+
+src/Database.i: src/Database.cpp.i
+
+.PHONY : src/Database.i
+
+# target to preprocess a source file
+src/Database.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Database.cpp.i
+.PHONY : src/Database.cpp.i
+
+src/Database.s: src/Database.cpp.s
+
+.PHONY : src/Database.s
+
+# target to generate assembly for a file
+src/Database.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Database.cpp.s
+.PHONY : src/Database.cpp.s
+
+src/Statement.o: src/Statement.cpp.o
+
+.PHONY : src/Statement.o
+
+# target to build an object file
+src/Statement.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Statement.cpp.o
+.PHONY : src/Statement.cpp.o
+
+src/Statement.i: src/Statement.cpp.i
+
+.PHONY : src/Statement.i
+
+# target to preprocess a source file
+src/Statement.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Statement.cpp.i
+.PHONY : src/Statement.cpp.i
+
+src/Statement.s: src/Statement.cpp.s
+
+.PHONY : src/Statement.s
+
+# target to generate assembly for a file
+src/Statement.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Statement.cpp.s
+.PHONY : src/Statement.cpp.s
+
+src/Transaction.o: src/Transaction.cpp.o
+
+.PHONY : src/Transaction.o
+
+# target to build an object file
+src/Transaction.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Transaction.cpp.o
+.PHONY : src/Transaction.cpp.o
+
+src/Transaction.i: src/Transaction.cpp.i
+
+.PHONY : src/Transaction.i
+
+# target to preprocess a source file
+src/Transaction.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Transaction.cpp.i
+.PHONY : src/Transaction.cpp.i
+
+src/Transaction.s: src/Transaction.cpp.s
+
+.PHONY : src/Transaction.s
+
+# target to generate assembly for a file
+src/Transaction.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/Transaction.cpp.s
+.PHONY : src/Transaction.cpp.s
+
+src/client.o: src/client.cpp.o
+
+.PHONY : src/client.o
+
+# target to build an object file
+src/client.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/client.cpp.o
+.PHONY : src/client.cpp.o
+
+src/client.i: src/client.cpp.i
+
+.PHONY : src/client.i
+
+# target to preprocess a source file
+src/client.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/client.cpp.i
+.PHONY : src/client.cpp.i
+
+src/client.s: src/client.cpp.s
+
+.PHONY : src/client.s
+
+# target to generate assembly for a file
+src/client.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/client.cpp.s
+.PHONY : src/client.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -207,9 +342,24 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Column.o"
+	@echo "... src/Column.i"
+	@echo "... src/Column.s"
+	@echo "... src/Database.o"
+	@echo "... src/Database.i"
+	@echo "... src/Database.s"
+	@echo "... src/Statement.o"
+	@echo "... src/Statement.i"
+	@echo "... src/Statement.s"
+	@echo "... src/Transaction.o"
+	@echo "... src/Transaction.i"
+	@echo "... src/Transaction.s"
+	@echo "... src/client.o"
+	@echo "... src/client.i"
+	@echo "... src/client.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
