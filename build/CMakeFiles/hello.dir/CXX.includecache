@@ -123,8 +123,6 @@ SQLiteCpp/SQLiteCpp.h
 /home/katod/projects/GSM/src/SQLiteCpp/SQLiteCpp.h
 
 /home/katod/projects/GSM/src/main.cpp
-stdio.h
--
 stdlib.h
 -
 string.h
