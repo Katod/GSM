@@ -12,7 +12,7 @@ int main ( int argc, char **argv )
 {
     std::cerr<<"TESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSST"<<std::endl;
   // std::cout<<"S,/home/katod/Downloads/example\n";
-    client* Test = new client ( 777,DB_PATH );
+    client* Test = new client ("777",DB_PATH );
     Test->communWithClient();
     return 0;
 }

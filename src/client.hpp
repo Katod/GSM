@@ -11,7 +11,7 @@ class client
 {
 
 private:
-    int phoneNumber;
+    std::string phoneNumber;
     int menuID;
     std::string callPath;
     SQLite::Database    db;    //< Database connection
@@ -21,7 +21,7 @@ private:
     static int getMenuID ( void *Object, int argc, char **argv, char **azColName );
 public:
     client();
-    client ( int phone_number,const char* db_path );
+    client ( std::string phone_number,const char* db_path );
     int communWithClient();
     std::string getDataByPath ( std::string path );
     std::string getDataByPath ();

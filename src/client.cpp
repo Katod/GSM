@@ -1,12 +1,12 @@
 #include        <stdio.h>
 #include        "client.hpp"
 
-client::client ( int phone_number,const char* db_path ) :
+client::client ( std::string phone_number,const char* db_path ) :
     phoneNumber ( phone_number ),
     db ( db_path )
 {
     try {
-        std::string Exec = "SELECT id FROM clients WHERE phone_number = "+ std::to_string ( phone_number );
+        std::string Exec = "SELECT id FROM clients WHERE phone_number = "+ phone_number;
         menuID = db.execAndGet ( Exec );
         // std::cout << "execAndGet=" << menuID << std::endl;
 
