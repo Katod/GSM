@@ -10,10 +10,17 @@ const char* DB_PATH ="/home/katod/projects/GSM/build/GSM";
 
 int main ( int argc, char **argv )
 {
-    std::cerr<<"TESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSST"<<std::endl;
-  // std::cout<<"S,/home/katod/Downloads/example\n";
-    client* Test = new client ("777",DB_PATH );
-    Test->communWithClient();
+    if ( argc > 1 ) {
+        std::cerr<<"Welcome to Larnitech GSM menu argc ="<<argc<<"  ARG = "<<argv[1]<<std::endl;
+
+        std::string  CallerData = argv[1];
+        std::string::size_type pos = CallerData.find ( "<" );
+        std::string CallerDataNew ( CallerData.substr ( ++pos ) );
+        CallerDataNew.pop_back();
+
+        client* Test = new client ( CallerDataNew,DB_PATH );
+        Test->communWithClient();
+    }
     return 0;
 }
 // kate: indent-mode cstyle; indent-width 4; replace-tabs on; 

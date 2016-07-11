@@ -27,6 +27,6 @@ public:
     std::string getDataByPath ();
     void setMenuId ( int id );
     void addGSMPath ( char* path, char* file );
-    void playFileByPath();
+    bool playFileByPath();
 };
 // kate: indent-mode cstyle; indent-width 4; replace-tabs on; 

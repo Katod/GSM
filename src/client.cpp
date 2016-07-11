@@ -38,7 +38,7 @@ client::client ( std::string phone_number,const char* db_path ) :
 int client::communWithClient()
 {
     this->callPath = "";
-    
+
     char    event[256];
     int     idx;
 
@@ -46,39 +46,43 @@ int client::communWithClient()
     std::cerr<<this->getDataByPath ( " " ) <<std::endl;
 // read events
     while ( NULL != fgets ( event, sizeof ( event ), stdin ) ) {
-        
+
         if ( '*' == *event ) {
             std::cerr<<"Number *"<<std::endl;
-            
+
             callPath.pop_back();
-            
-            if(callPath.empty())
+
+            if ( callPath.empty() ) {
                 callPath = " ";
-            
-            playFileByPath();           
+            }
+
+            playFileByPath();
         }
 
         else if ( '#' == *event ) {
             std::cerr<<"Number #"<<std::endl;
             break;
         }
-        
-        else if('1'==*event ||
-                '2'==*event ||
-                '3'==*event ||
-                '4'==*event ||
-                '5'==*event ||
-                '6'==*event ||
-                '7'==*event ||
-                '8'==*event ||
-                '9'==*event) {
-            
-            if(callPath == " ")
-               callPath.pop_back();
-            
+
+        else if ( '1'==*event ||
+                  '2'==*event ||
+                  '3'==*event ||
+                  '4'==*event ||
+                  '5'==*event ||
+                  '6'==*event ||
+                  '7'==*event ||
+                  '8'==*event ||
+                  '9'==*event ) {
+
+            if ( callPath == " " ) {
+                callPath.pop_back();
+            }
+
             callPath+=*event;
             std::cerr<<callPath<<std::endl;
-            playFileByPath();
+            if ( !playFileByPath() ) {
+                callPath.pop_back();
+            }
         }
     }
 
@@ -86,10 +90,14 @@ int client::communWithClient()
 
 }
 
-void client::playFileByPath ()
+bool client::playFileByPath ()
 {
-    if(!getDataByPath().empty())
-    std::cout<<"S,"<<getDataByPath()<<std::endl;
+    if ( !getDataByPath().empty() ) {
+        std::cout<<"S,"<<getDataByPath() <<std::endl;
+        return true;
+    } else {
+        return false;
+    }
 }
 
 
