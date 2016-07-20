@@ -12,7 +12,7 @@ int main ( int argc, char **argv )
 {
     if ( argc > 1 ) {
         std::cerr<<"Welcome to Larnitech GSM menu argc ="<<argc<<"  ARG = "<<argv[1]<<std::endl;
-
+ 
         std::string  CallerData = argv[1];
         std::string::size_type pos = CallerData.find ( "<" );
         std::string CallerDataNew ( CallerData.substr ( ++pos ) );
