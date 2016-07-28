@@ -1,9 +1,10 @@
 #include        <stdio.h>
 #include        "client.hpp"
 
-client::client ( std::string phone_number,const char* db_path ) :
+client::client ( std::string phone_number,const char* db_path,  const char* voice_path) :
     phoneNumber ( phone_number ),
-    db ( db_path )
+    db ( db_path ),
+    pathToVoice( voice_path)
 {
     try {
         std::string Exec = "SELECT id FROM clients WHERE phone_number = "+ phone_number;
@@ -15,16 +16,17 @@ client::client ( std::string phone_number,const char* db_path ) :
         // std::cout << "SQLite statement '" << query.getQuery().c_str() << "' compiled (" << query.getColumnCount () << " columns in the result)\n";
 
         while ( query.executeStep() ) {
-            std::string colum_1 = query.getColumn ( 1 ); // VELOSIPED
-            std::string colum_2 = query.getColumn ( 2 ); // KOSTUL
+            std::string colum_1 = query.getColumn ( 1 );
+            std::string colum_2 = query.getColumn ( 2 );
             //gsmMenu.insert ( std::pair<std::string,std::string> (std::string(query.getColumn ( 1 )),std::string(query.getColumn ( 1 ) )));
             gsmMenu.insert ( std::pair<std::string,std::string> ( colum_1,colum_2 ) );
         }
 
-//         for ( auto it = gsmMenu.begin(); it != gsmMenu.end(); ++it ) {
-//             std::cout << ( *it ).first << " : " << ( *it ).second << std::endl;
+//      for ( auto it = gsmMenu.begin(); it != gsmMenu.end(); ++it ) 
+//      {
+//              std::cout << ( *it ).first << " : " << ( *it ).second << std::endl;
 //
-//         }
+//      }
 
     }
 
@@ -37,13 +39,14 @@ client::client ( std::string phone_number,const char* db_path ) :
 
 int client::communWithClient()
 {
-    this->callPath = "";
+    this->callPath = " ";
 
     char    event[256];
     int     idx;
 
 
-    std::cerr<<this->getDataByPath ( " " ) <<std::endl;
+    std::cerr<<this->getDataByPath() <<std::endl;
+    playFileByPath();
 // read events
     while ( NULL != fgets ( event, sizeof ( event ), stdin ) ) {
 
@@ -79,7 +82,7 @@ int client::communWithClient()
             }
 
             callPath+=*event;
-            std::cerr<<callPath<<std::endl;
+            std::cerr<<"CALL PATH"<<callPath<<std::endl;
             if ( !playFileByPath() ) {
                 callPath.pop_back();
             }
@@ -105,12 +108,12 @@ bool client::playFileByPath ()
 
 std::string client::getDataByPath ( std::string path )
 {
-    auto it = this->gsmMenu.find ( path );
-    if ( it != gsmMenu.end() ) {
-        return ( *it ).second;
-    } else {
-        return "";
-    }
+     auto it = this->gsmMenu.find ( path );
+     if ( it != gsmMenu.end() ) {
+        return pathToVoice+std::to_string(menuID)+"_"+path;
+     } else {
+         return "";
+     }
 }
 
 
@@ -119,7 +122,7 @@ std::string client::getDataByPath()
 {
     auto it = this->gsmMenu.find ( this->callPath );
     if ( it != gsmMenu.end() ) {
-        return ( *it ).second;
+        return pathToVoice+std::to_string(menuID)+"_"+callPath;
     } else {
         return "";
     }
